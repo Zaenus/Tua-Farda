@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - Tua Farda</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <h1>Tua Farda</h1>
+    <p id="welcome">Seu Jogo, Seu Estilo</p>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <a href="#" class="header-logo">
+          <img src="./images/logo.PNG" alt="Tua Farda">
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="toggler menu-toggler">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </header>
+      <nav class="sidebar-nav">
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="/index" class="nav-link" data-category="all">
+              <span class="nav-icon material-symbols-rounded">search</span>
+              <span class="nav-label">All Shirts</span>
+            </a>
+            <span class="nav-tooltip">All Shirts</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-category="soccer">
+              <span class="nav-icon material-symbols-rounded">sports_soccer</span>
+              <span class="nav-label">Soccer</span>
+            </a>
+            <span class="nav-tooltip">Soccer</span>
+          </li>
+          <  <li class="nav-item">
+            <a href="#" class="nav-link" data-category="football">
+              <span class="nav-icon material-symbols-rounded">sports_football</span>
+              <span class="nav-label">Football</span>
+            </a>
+            <span class="nav-tooltip">Football</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-category="basketball">
+              <span class="nav-icon material-symbols-rounded">sports_basketball</span>
+              <span class="nav-label">Basketball</span>
+            </a>
+            <span class="nav-tooltip">Basketball</span>
+          </li>
+          <li class="nav-item">
+            <a href="/my-orders" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">history</span>
+              <span class="nav-label">My Orders</span>
+            </a>
+            <span class="nav-tooltip">My Orders</span>
+          </li>
+          <li class="nav-item">
+            <a href="/cart" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">shopping_cart</span>
+              <span class="nav-label">Cart</span>
+            </a>
+            <span class="nav-tooltip">Cart</span>
+          </li>
+        </ul>
+        <ul class="nav-list secondary-nav">
+          <li class="nav-item" id="login-item">
+            <a href="/login" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">login</span>
+              <span class="nav-label">Log In</span>
+            </a>
+            <span class="nav-tooltip">Log In</span>
+          </li>
+          <li class="nav-item hidden" id="logout-item">
+            <a href="#" class="nav-link" id="logout">
+              <span class="nav-icon material-symbols-rounded">logout</span>
+              <span class="nav-label">Logout</span>
+            </a>
+            <span class="nav-tooltip">Logout</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section id="shirt-section">
+        <div class="product-details">
+          <div class="product-images">
+            <img id="main-image" class="main-image" src="" alt="Shirt">
+            <div class="thumbnails">
+              <img id="thumbnail" class="thumbnail active" src="" alt="Thumbnail">
+            </div>
+          </div>
+          <div class="product-info">
+            <h1 id="shirt-name" class="product-title"></h1>
+            <div class="product-rating">
+              <div id="stars" class="stars"></div>
+              <span id="rating-summary"></span>
+            </div>
+            <div class="product-price">
+              <span id="shirt-price" class="price"></span>
+              <span id="shirt-price-text" class="price-text"></span>
+            </div>
+            <div class="buy-section">
+              <h3>Opções de Compra</h3>
+              <div class="buy-actions">
+                <button id="add-to-cart" class="cart-button">Adicionar ao Carrinho</button>
+                <button id="buy-now" class="buy-button">Finalizar Compra</button>
+              </div>
+            </div>
+            <h2>Descrição</h2>
+            <p id="shirt-description"></p>
+            <h2>Detalhes</h2>
+            <ul>
+              <li><strong>Categoria:</strong> <span id="shirt-category"></span></li>
+            </ul>
+          </div>
+          <div class="related-products">
+            <h2>Produtos Relacionados</h2>
+            <div id="related-products-list" class="shirt-grid"></div>
+          </div>
+          <div class="reviews-section">
+            <h2>Avaliações</h2>
+            <form id="review-form" class="review-form">
+              <label for="rating">Sua Avaliação:</label>
+              <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" required><label for="star5"><i class='bx bxs-star'></i></label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4"><i class='bx bxs-star'></i></label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3"><i class='bx bxs-star'></i></label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2"><i class='bx bxs-star'></i></label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1"><i class='bx bxs-star'></i></label>
+              </div>
+              <label for="comment">Comentário:</label>
+              <textarea id="comment" name="comment" rows="3" placeholder="Escreva sua avaliação" required></textarea>
+              <button type="submit" id="submit-review">Enviar Avaliação</button>
+            </form>
+            <div id="reviews-list" class="reviews-list"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="payment-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Finalizar Pagamento</h2>
+      <p>Siga as instruções abaixo para completar seu pagamento:</p>
+      <div id="payment-container"></div>
+      <p><strong>ID do Pagamento:</strong> <span id="payment-id"></span></p>
+      <button onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+  <script src="./js/product.js"></script>
+</body>
+</html>

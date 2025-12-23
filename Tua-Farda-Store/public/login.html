@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Tua Farda</title>
+  <link rel="stylesheet" href="./css/login.css">
+</head>
+<body class="login-page">
+  <div class="login_form">
+    <!-- Login form -->
+    <form id="login-form" class="form active">
+      <h3>Log in to Tua Farda</h3>
+      <div class="input_box">
+        <label for="login-username">Username</label>
+        <input type="text" id="login-username" placeholder="Enter username" required />
+      </div>
+      <div class="input_box">
+        <div class="password_title">
+          <label for="login-password">Password</label>
+          <a href="#" id="show-reset">Forgot Password?</a>
+        </div>
+        <input type="password" id="login-password" placeholder="Enter your password" required />
+      </div>
+      <button type="submit">Log In</button>
+      <p class="sign_up">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+    </form>
+    <!-- Signup form -->
+    <form id="signup-form" class="form hidden">
+      <h3>Sign up for Tua Farda</h3>
+      <div class="input_box">
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" placeholder="Choose a username" required />
+      </div>
+      <div class="input_box">
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" placeholder="Create a password" required />
+      </div>
+      <div class="input_box">
+        <label for="signup-cpf">CPF</label>
+        <input type="text" id="signup-cpf" placeholder="123.456.789-00" required />
+      </div>
+      <div class="input_box">
+        <label for="signup-email">E-mail</label>
+        <input type="email" id="signup-email" placeholder="example@gmail.com" required />
+      </div>
+      <div class="input_box">
+        <label for="signup-phone">Phone Number</label>
+        <input type="text" id="signup-phone" placeholder="+55 11 98765-4321" required />
+      </div>
+      <!-- Optional address fields -->
+      <h4>Optional: Add a Shipping Address</h4>
+      <div class="input_box">
+        <label for="signup-address-line1">Address Line 1</label>
+        <input type="text" id="signup-address-line1" placeholder="Street address" />
+      </div>
+      <div class="input_box">
+        <label for="signup-address-line2">Address Line 2</label>
+        <input type="text" id="signup-address-line2" placeholder="Apartment, suite (optional)" />
+      </div>
+      <div class="input_box">
+        <label for="signup-city">City</label>
+        <input type="text" id="signup-city" placeholder="City" />
+      </div>
+      <div class="input_box">
+        <label for="signup-state">State</label>
+        <input type="text" id="signup-state" placeholder="State" />
+      </div>
+      <div class="input_box">
+        <label for="signup-postal-code">Postal Code</label>
+        <input type="text" id="signup-postal-code" placeholder="Postal Code" />
+      </div>
+      <div class="input_box">
+        <label for="signup-country">Country</label>
+        <input type="text" id="signup-country" placeholder="Country" />
+      </div>
+      <label><input type="checkbox" id="signup-is-default" checked> Set as default address</label>
+      <button type="submit">Sign Up</button>
+      <p class="sign_up">Already have an account? <a href="#" id="show-login">Log in</a></p>
+    </form>
+    <!-- Reset Password Request Form -->
+    <form id="reset-form" class="form hidden">
+      <h3>Reset Password</h3>
+      <div class="input_box">
+        <label for="reset-username">Username</label>
+        <input type="text" id="reset-username" placeholder="Enter your username" required />
+      </div>
+      <button type="submit">Send Reset Link</button>
+      <p class="sign_up">Back to <a href="#" id="show-login-from-reset">Log in</a></p>
+    </form>
+    <!-- Message Modal -->
+    <div id="message-modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="modal-close" class="modal-close">×</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-message"></p>
+        <button id="modal-ok" class="btn">OK</button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/login.js"></script>
+</body>
+</html>

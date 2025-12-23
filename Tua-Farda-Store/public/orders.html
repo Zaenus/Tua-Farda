@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Orders - Tua Farda</title>
+  <link rel="stylesheet" href="./css/orders.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <h1>Tua Farda</h1>
+    <p>Orders Management</p>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <a href="#" class="header-logo">
+          <img src="./images/logo.PNG" alt="Tua Farda">
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="nav-icon material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="toggler menu-toggler">
+          <span class="nav-icon material-symbols-rounded">menu</span>
+        </button>
+      </header>
+      <nav class="sidebar-nav">
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="/index" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">store</span>
+              <span class="nav-label">View Store</span>
+            </a>
+            <span class="nav-tooltip">View Store</span>
+          </li>
+          <li class="nav-item">
+            <a href="/admin" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">add_circle</span>
+              <span class="nav-label">Manage Products</span>
+            </a>
+            <span class="nav-tooltip">Manage Products</span>
+          </li>
+          <li class="nav-item">
+            <a href="/orders" class="nav-link active">
+              <span class="nav-icon material-symbols-rounded">receipt_long</span>
+              <span class="nav-label">Manage Orders</span>
+            </a>
+            <span class="nav-tooltip">Manage Orders</span>
+          </li>
+        </ul>
+        <ul class="nav-list secondary-nav">
+          <li class="nav-item" id="login-item">
+            <a href="/login" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">login</span>
+              <span class="nav-label">Log In</span>
+            </a>
+            <span class="nav-tooltip">Log In</span>
+          </li>
+          <li class="nav-item hidden" id="logout-item">
+            <a href="#" class="nav-link" id="logout">
+              <span class="nav-icon material-symbols-rounded">logout</span>
+              <span class="nav-label">Logout</span>
+            </a>
+            <span class="nav-tooltip">Logout</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section id="orders-section">
+        <h2>Manage Orders</h2>
+        <form id="filter-form" class="filter-form compact">
+          <div class="filter-group">
+            <label for="search-input">Pesquisar:</label>
+            <input type="text" id="search-input" name="search" placeholder="Cliente, CPF, Cidade ou ID do Pedido">
+          </div>
+          <div class="filter-group">
+            <label for="status-filter">Status:</label>
+            <select id="status-filter" name="status">
+              <option value="pending">Pendente</option>
+              <option value="completed">Concluído</option>
+              <option value="cancelled">Cancelado</option>
+              <option value="all" selected>Todos</option>
+            </select>
+          </div>
+          <button type="submit">Aplicar</button>
+        </form>
+        <div id="orders-list" class="orders-grid"></div>
+        <div class="pagination">
+          <button id="prev-page" disabled>Anterior</button>
+          <span id="page-info">Página 1</span>
+          <button id="next-page">Próximo</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./js/orders.js"></script>
+</body>
+</html>

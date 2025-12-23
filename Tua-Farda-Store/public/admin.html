@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Tua Farda</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+  <header>
+    <h1>Tua Farda</h1>
+    <p>Admin Dashboard</p>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <a href="#" class="header-logo">
+          <img src="./images/logo.PNG" alt="Tua Farda">
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="toggler menu-toggler">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </header>
+      <nav class="sidebar-nav">
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="/index" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">store</span>
+              <span class="nav-label">View Store</span>
+            </a>
+            <span class="nav-tooltip">View Store</span>
+          </li>
+          <li class="nav-item">
+            <a href="/admin" class="nav-link active">
+              <span class="nav-icon material-symbols-rounded">add_circle</span>
+              <span class="nav-label">Manage Products</span>
+            </a>
+            <span class="nav-tooltip">Manage Products</span>
+          </li>
+          <li class="nav-item">
+            <a href="/orders" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">receipt_long</span>
+              <span class="nav-label">Manage Orders</span>
+            </a>
+            <span class="nav-tooltip">Manage Orders</span>
+          </li>
+        </ul>
+        <ul class="nav-list secondary-nav">
+          <li class="nav-item" id="login-item">
+            <a href="/login" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">login</span>
+              <span class="nav-label">Log In</span>
+            </a>
+            <span class="nav-tooltip">Log In</span>
+          </li>
+          <li class="nav-item hidden" id="logout-item">
+            <a href="#" class="nav-link" id="logout">
+              <span class="nav-icon material-symbols-rounded">logout</span>
+              <span class="nav-label">Logout</span>
+            </a>
+            <span class="nav-tooltip">Logout</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section id="add-product-section">
+        <h2>Add New Shirt</h2>
+        <form id="add-product-form" enctype="multipart/form-data">
+          <label for="name">Shirt Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="price">Price (R$):</label>
+          <input type="number" id="price" name="price" step="0.01" required>
+          <label for="category">Category:</label>
+          <select id="category" name="category" required>
+            <option value="soccer">Soccer</option>
+            <option value="football">Football</option>
+            <option value="basketball">Basketball</option>
+          </select>
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" rows="4" placeholder="Enter shirt description (e.g., material, fit, features)" required></textarea>
+          <label for="image">Shirt Image:</label>
+          <input type="file" id="image" name="image" accept="image/*" required>
+          <button type="submit">Add Shirt</button>
+        </form>
+        <h3>Current Shirts</h3>
+        <div id="shirt-list" class="shirt-grid"></div>
+      </section>
+      <section id="orders-section" class="admin-section hidden">
+        <h2>Manage Orders</h2>
+        <div id="orders-list" class="orders-grid"></div>
+      </section>
+    </main>
+  </div>
+  <script src="./js/admin.js"></script>
+</body>
+</html>

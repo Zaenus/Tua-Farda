@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tua Farda - Sports Shirts</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <!-- Add Font Awesome for arrow icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Tua Farda</h1>
+    <p id="welcome">Seu Jogo, Seu Estilo</p>
+  </header>
+  <div class="container">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <a href="#" class="header-logo">
+          <img src="./images/logo.PNG" alt="Tua Farda">
+        </a>
+        <button class="toggler sidebar-toggler">
+          <span class="material-symbols-rounded">chevron_left</span>
+        </button>
+        <button class="toggler menu-toggler">
+          <span class="material-symbols-rounded">menu</span>
+        </button>
+      </header>
+      <nav class="sidebar-nav">
+        <ul class="nav-list primary-nav">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link" data-category="all">
+              <span class="nav-icon material-symbols-rounded">search</span>
+              <span class="nav-label">All Shirts</span>
+            </a>
+            <span class="nav-tooltip">All Shirts</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-category="soccer">
+              <span class="nav-icon material-symbols-rounded">sports_soccer</span>
+              <span class="nav-label">Soccer</span>
+            </a>
+            <span class="nav-tooltip">Soccer</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-category="football">
+              <span class="nav-icon material-symbols-rounded">sports_football</span>
+              <span class="nav-label">Football</span>
+            </a>
+            <span class="nav-tooltip">Football</span>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-category="basketball">
+              <span class="nav-icon material-symbols-rounded">sports_basketball</span>
+              <span class="nav-label">Basketball</span>
+            </a>
+            <span class="nav-tooltip">Basketball</span>
+          </li>
+          <li class="nav-item">
+            <a href="/my-orders" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">history</span>
+              <span class="nav-label">My Orders</span>
+            </a>
+            <span class="nav-tooltip">My Orders</span>
+          </li>
+          <li class="nav-item">
+            <a href="/cart" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">shopping_cart</span>
+              <span class="nav-label">Cart</span>
+            </a>
+            <span class="nav-tooltip">Cart</span>
+          </li>
+        </ul>
+        <ul class="nav-list secondary-nav">
+          <li class="nav-item" id="login-item">
+            <a href="/login" class="nav-link">
+              <span class="nav-icon material-symbols-rounded">login</span>
+              <span class="nav-label">Log In</span>
+            </a>
+            <span class="nav-tooltip">Log In</span>
+          </li>
+          <li class="nav-item hidden" id="logout-item">
+            <a href="#" class="nav-link" id="logout">
+              <span class="nav-icon material-symbols-rounded">logout</span>
+              <span class="nav-label">Logout</span>
+            </a>
+            <span class="nav-tooltip">Logout</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section id="shirt-section">
+        <!-- New Image Slider -->
+        <div class="slider-container">
+          <div class="slides">
+            <div class="slide" data-category="novidades">
+              <a href="./novidades">
+                <img src="./images/novidades.jpeg" alt="Novidades">
+                <div class="slide-caption">Novidades</div>
+              </a>
+            </div>
+            <div class="slide" data-category="ofertas">
+              <a href="./ofertas">
+                <img src="./images/ofertas.jpeg" alt="Ofertas">
+                <div class="slide-caption">Ofertas</div>
+              </a>
+            </div>
+            <div class="slide" data-category="mais-vendidos">
+              <a href="./mais-vendidos">
+                <img src="./images/mais-vendidos.jpeg" alt="Mais Vendidos">
+                <div class="slide-caption">Mais Vendidos</div>
+              </a>
+            </div>
+          </div>
+          <div class="slider-dots">
+            <span class="dot" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+        <div id="shirt-list" class="shirt-grid"></div>
+      </section>
+        <!-- Customer Testimonials Slider -->
+  <div class="testimonials-wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <ul class="testimonials-carousel">
+      <li class="testimonial-card">
+        <div class="img"><img src="./images/customer1.jpeg" alt="Customer" draggable="false"></div>
+        <h2>João Silva</h2>
+        <span>Soccer Enthusiast</span>
+        <p>"As camisas são incríveis! Qualidade top e entrega rápida."</p>
+      </li>
+      <li class="testimonial-card">
+        <div class="img"><img src="./images/customer2.jpeg" alt="Customer" draggable="false"></div>
+        <h2>Maria Oliveira</h2>
+        <span>Basketball Fan</span>
+        <p>"Adorei o design e o conforto das camisas. Recomendo!"</p>
+      </li>
+      <li class="testimonial-card">
+        <div class="img"><img src="./images/customer3.jpeg" alt="Customer" draggable="false"></div>
+        <h2>Pedro Santos</h2>
+        <span>Football Lover</span>
+        <p>"Melhor loja de esportes que já comprei. 5 estrelas!"</p>
+      </li>
+      <li class="testimonial-card">
+        <div class="img"><img src="./images/customer4.jpeg" alt="Customer" draggable="false"></div>
+        <h2>Ana Costa</h2>
+        <span>Soccer Mom</span>
+        <p>"Meu filho amou a camisa nova. Voltarei com certeza!"</p>
+      </li>
+    </ul>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+    </main>
+  </div>
+  <div id="pix-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Pay with Pix</h2>
+      <p>Use the link below:</p>
+      <div id="pix-qr-container"></div>
+      <p><strong>Order ID:</strong> <span id="pix-code"></span></p>
+      <button onclick="closeModal()">Close</button>
+    </div>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>

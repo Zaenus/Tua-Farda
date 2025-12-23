@@ -1,0 +1,233 @@
+/* login-styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body.login-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 10px;
+  display: flex;
+  background: #151A2D;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.login_form {
+  width: 100%;
+  max-width: 435px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  padding: 41px 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+.login_form h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #333333;
+}
+
+.login_form p {
+  text-align: center;
+  font-weight: 500;
+  color: #333333;
+}
+
+form .input_box label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333333;
+}
+
+form .input_box input {
+  width: 100%;
+  height: 57px;
+  border: 1px solid #DADAF2;
+  border-radius: 5px;
+  outline: none;
+  background: #F8F8FB;
+  font-size: 17px;
+  padding: 0px 20px;
+  margin-bottom: 25px;
+  transition: 0.2s ease;
+}
+
+form .input_box input:focus {
+  border-color: #FFE500;
+}
+
+form .input_box .password_title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+form .input_box {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #2a27b6;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form button {
+  width: 100%;
+  height: 56px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #151A2D;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background: #333333;
+}
+
+.form.hidden {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(21, 26, 45, 0.7);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal.active {
+  display: flex; /* Shown when active */
+}
+
+.modal-content {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 350px;
+  width: 85%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border: 2px solid #FFE500;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.8rem;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #FFE500;
+}
+
+.modal-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+.modal-content .btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #151A2D;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content .btn:hover {
+  background-color: #FFE500;
+  color: #151A2D;
+}
+
+/* Success and Error Styles */
+.modal-success h2 {
+  color: #2ecc71;
+}
+
+.modal-error h2 {
+  color: #e74c3c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .login_form {
+    padding: 20px;
+    max-width: 350px;
+  }
+
+  form .input_box input {
+    height: 50px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  form button {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+    max-width: 300px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+  }
+
+  .modal-content .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-close {
+    font-size: 1.5rem;
+  }
+}
